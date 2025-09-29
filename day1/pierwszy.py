@@ -126,3 +126,61 @@ print(f"Nasza duża liczba: {zysk:_}".replace("_", " "))  # Nasza duża liczba: 
 liczba = 15_000_000_000
 print(liczba)
 print(type(liczba))  # <class 'int'>
+
+# kolekcje
+# lista - przechowuje elementy z zachowaniem kolności
+# wiele elemntów, różnego typu
+lista = ['4,2,8,1,90, "Radek']
+print(lista)  # ['4,2,8,1,90, "Radek']
+print(type(lista))  # <class 'list'>
+
+lista = []  # pusta lista
+lista.append("Radek")
+lista.append("Tomek")
+lista.append("Zenek")
+lista.append("Klaudia")
+lista.append("Maciej")
+lista.append("Marek")
+lista.append("Maks")
+print(lista)  # ['Radek', 'Tomek', 'Zenek', 'Klaudia', 'Maciej', 'Marek', 'Maks']
+
+# usunięcie
+lista.remove("Radek")
+print(lista)
+# ['Tomek', 'Zenek', 'Klaudia', 'Maciej', 'Marek', 'Maks']
+
+lista_copy = lista.copy()  # kopia elementów listy
+lista_k = lista  # kopia referencji, adresu listy
+lista.clear()  # usnięcie elementów z listy
+print(lista_k)  # ['Tomek', 'Zenek', 'Klaudia', 'Maciej', 'Marek', 'Maks']
+print(lista)  # ['Tomek', 'Zenek', 'Klaudia', 'Maciej', 'Marek', 'Maks']
+print(lista_copy)  # ['Tomek', 'Zenek', 'Klaudia', 'Maciej', 'Marek', 'Maks']
+
+# krotka (tupla)  - kolekcja niemutowalna
+# pozwala lepiej zarzadzac pamięcią
+krotka = tuple(lista_copy)
+print(krotka)  # ('Tomek', 'Zenek', 'Klaudia', 'Maciej', 'Marek', 'Maks')
+print(type(krotka))  # <class 'tuple'>
+tupla1 = 'Radek', "Tomek"
+print(type(tupla1))  # <class 'tuple'>
+
+# zbiór - set
+# przechowuje unikalne elemnty, nie zachowuje kolejności
+lista = [2, 5, 6, 8, 6, 7, 8, 5, 9]
+zbior = set(lista)
+print(zbior)  # {2, 5, 6, 7, 8, 9}
+print(type(zbior))  # <class 'set'>
+zbior.add(15)
+print(zbior)  # {2, 5, 6, 7, 8, 9, 15}
+
+# słownik - klucz wartośc
+slownik = {'name': "Radek", 'age': 56}
+print(slownik)  # {'name': 'Radek', 'age': 56}
+print(type(slownik))  # <class 'dict'>
+
+print(slownik.keys())
+print(slownik.values())
+print(slownik.items())
+# dict_keys(['name', 'age'])
+# dict_values(['Radek', 56])
+# dict_items([('name', 'Radek'), ('age', 56)])
