@@ -112,3 +112,17 @@ Tekst
 # komentarz dokumentacyjny
 """Komentarz 
 wielolinijkowy"""
+
+print(100 / 3)  # dzielenie, 33.333333333333336
+print(100 // 3)  # część całkowita, 33
+print(100 % 3)  # reszta z dzielenia, 1
+print(10 % 3)  # reszta 1, modulo
+
+zysk = 890123456654
+print(f"Nasza duża liczba: {zysk:,}")  # Nasza duża liczba: 890,123,456,654
+print(f"Nasza duża liczba: {zysk:_}")  # Nasza duża liczba: 890_123_456_654
+print(f"Nasza duża liczba: {zysk:_}".replace("_", " "))  # Nasza duża liczba: 890 123 456 654
+
+liczba = 15_000_000_000
+print(liczba)
+print(type(liczba))  # <class 'int'>
