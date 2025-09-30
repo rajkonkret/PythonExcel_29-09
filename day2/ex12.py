@@ -50,4 +50,33 @@ print(df.info())
 # dtypes: float64(1), int64(1), object(3)
 # memory usage: 192.0+ bytes
 # None
+# wypisanie indeksów
+print(df.index)  # Index([1001, 1000, 1002, 1003], dtype='int64')
+df.index.name = "numer"
+print(df)
+#         imie  wiek    kraj  ocena kontynent
+# numer
+# 1001    Mark    55  Włochy    4.5    Europa
+# 1000    Jhon    33     USA    6.7   Ameryka
+# 1002     Tim    41     USA    3.9   Ameryka
+# 1003   Jenny    12  Niemcy    0.0    Europa
 
+df.reset_index().set_index("imie")
+df.reindex([999, 1000, 1001, 1004])
+df.sort_index()
+print(df)
+
+# numer
+# 1001    Mark    55  Włochy    4.5    Europa
+# 1000    Jhon    33     USA    6.7   Ameryka
+# 1002     Tim    41     USA    3.9   Ameryka
+# 1003   Jenny    12  Niemcy    0.0    Europa
+
+# sortowanie danych
+print(df.sort_values(['kontynent', "wiek"]))
+#         imie  wiek    kraj  ocena kontynent
+# numer
+# 1000    Jhon    33     USA    6.7   Ameryka
+# 1002     Tim    41     USA    3.9   Ameryka
+# 1003   Jenny    12  Niemcy    0.0    Europa
+# 1001    Mark    55  Włochy    4.5    Europa
