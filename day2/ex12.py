@@ -24,3 +24,30 @@ data = [
     ["Tim", 41, "USA", 3.9, "Ameryka"],
     ["Jenny", 12, "Niemcy", 0.0, "Europa"],
 ]
+
+df = pd.DataFrame(data=data,
+                  columns=["imie", "wiek", "kraj", "ocena", "kontynent"],
+                  index=[1001, 1000, 1002, 1003])
+
+print(df)
+#        imie  wiek    kraj  ocena kontynent
+# 1001   Mark    55  Włochy    4.5    Europa
+# 1000   Jhon    33     USA    6.7   Ameryka
+# 1002    Tim    41     USA    3.9   Ameryka
+# 1003  Jenny    12  Niemcy    0.0    Europa
+
+print(df.info())
+# <class 'pandas.core.frame.DataFrame'>
+# Index: 4 entries, 1001 to 1003
+# Data columns (total 5 columns):
+#  #   Column     Non-Null Count  Dtype
+# ---  ------     --------------  -----
+#  0   imie       4 non-null      object
+#  1   wiek       4 non-null      int64
+#  2   kraj       4 non-null      object
+#  3   ocena      4 non-null      float64
+#  4   kontynent  4 non-null      object
+# dtypes: float64(1), int64(1), object(3)
+# memory usage: 192.0+ bytes
+# None
+
