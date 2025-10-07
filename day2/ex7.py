@@ -27,7 +27,7 @@ chart.title = "Total Sales"
 chart.x_axis.title = "Genre"
 chart.y_axis.title = "Total Sales by Genre"
 # chart.y_axis.majorUnit = 50
-# chart.y_axis.crossAx = 500
+# chart.y_axis.crossAx = 500 do sprawwdzenia, nie działa
 # chart.y_axis.majorTickMark = "out"
 # chart.y_axis.majorTickMark = "in"
 # umiesczenie wykresu w komórce D2
